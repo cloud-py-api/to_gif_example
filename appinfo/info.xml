@@ -1,27 +1,35 @@
 <?xml version="1.0"?>
 <info>
-	<id>to_gif</id>
-	<name>ToGif</name>
-	<summary>Nextcloud To Gif Example</summary>
+	<id>to_gif_example</id>
+	<name>To Gif Example</name>
+	<summary>Nextcloud Video To Gif Example</summary>
 	<description>
-	<![CDATA[Example of a Nextcloud application written in Python]]>
-	</description>
-	<version>1.0.0</version>
+	<![CDATA[
+**Demonstration app using [`AppAPI`](https://github.com/nextcloud/app_api) and the [Nextcloud Python Framework](https://github.com/cloud-py-api/nc_py_api) with the Files API.**
+
+This application is just an example, with simple conversion using opencv and numpy.
+
+Other modifications such as displaying a user interface or specifying additional user parameters/settings are left as exercises to the reader. Pull requests with your solutions are welcome!
+
+Refer to [How to install](https://github.com/cloud-py-api/to_gif_example/blob/main/HOW_TO_INSTALL.md) to try it.
+	]]></description>
+	<version>1.4.0</version>
 	<licence>MIT</licence>
 	<author mail="andrey18106x@gmail.com" homepage="https://github.com/andrey18106">Andrey Borysenko</author>
 	<author mail="bigcat88@icloud.com" homepage="https://github.com/bigcat88">Alexander Piskun</author>
 	<namespace>ToGifExample</namespace>
+	<screenshot>https://raw.githubusercontent.com/cloud-py-api/to_gif_example/main/screenshots/fileaction.png</screenshot>
 	<category>tools</category>
-	<website>https://github.com/cloud-py-api/nc_py_api</website>
-	<bugs>https://github.com/cloud-py-api/nc_py_api/issues</bugs>
-	<repository type="git">https://github.com/cloud-py-api/nc_py_api</repository>
+	<website>https://github.com/cloud-py-api/to_gif_example</website>
+	<bugs>https://github.com/cloud-py-api/to_gif_example/issues</bugs>
+	<repository type="git">https://github.com/cloud-py-api/to_gif_example.git</repository>
 	<dependencies>
 		<nextcloud min-version="28" max-version="31"/>
 	</dependencies>
 	<external-app>
 		<docker-install>
 			<registry>ghcr.io</registry>
-			<image>cloud-py-api/to_gif</image>
+			<image>cloud-py-api/to_gif_example</image>
 			<image-tag>latest</image-tag>
 		</docker-install>
 		<routes>
