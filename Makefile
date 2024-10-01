@@ -2,9 +2,9 @@
 
 GITHUB_USERNAME := cloud-py-api
 
-APP_ID := to_gif
-APP_NAME := ToGif
-APP_VERSION := 1.0.0
+APP_ID := to_gif_example
+APP_NAME := ToGifExample
+APP_VERSION := 1.4.0
 APP_SECRET := 12345
 APP_PORT := 9031
 
