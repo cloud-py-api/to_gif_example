@@ -1,10 +1,18 @@
 ## Nextcloud Video To Gif Example
 
-Demonstration of using [AppAPI](https://github.com/cloud-py-api/app_api) and File Actions.
+Demonstration app using [AppAPI] and the [Nextcloud Python Framework]
+with the Files API.
 
-This application is an example, with simple conversion using opencv and numpy.
+This application just is an example,
+with simple conversion using opencv and numpy.
 
-After adding the ability for external applications to display a user interface, 
-the example will be modified to use more complex logic depending on the parameters specified by the user.
+Other modifications such as displaying a user interface
+or specifying additional user parameters/settings
+are left as exercises to the reader.
+Pull requests with your solutions are welcome!
 
-Refer to [How to install](https://github.com/cloud-py-api/to_gif_example/blob/main/HOW_TO_INSTALL.md) to try it.
+Refer to [How to install] to try it.
+
+[AppAPI]: https://github.com/nextcloud/app_api
+[Nextcloud Python Framework]: https://github.com/cloud-py-api/nc_py_api
+[How to install]: https://github.com/cloud-py-api/to_gif_example/blob/main/HOW_TO_INSTALL.md
