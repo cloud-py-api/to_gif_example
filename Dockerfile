@@ -1,4 +1,4 @@
-FROM python:3.10-slim-bookworm
+FROM python:3-bookworm
 
 COPY requirements.txt /
 
@@ -8,7 +8,10 @@ ADD j[s] /app/js
 ADD l10[n] /app/l10n
 ADD li[b] /app/lib
 
-RUN apt-get update && apt-get install -y libgl1 libgl1-mesa-glx libglib2.0-0 gifsicle
+RUN \
+    apt-get update && \
+    apt-get install -y \
+    ffmpeg libsm6 libxext6 gifsicle
 
 RUN \
   python3 -m pip install -r requirements.txt && rm -rf ~/.cache && rm requirements.txt

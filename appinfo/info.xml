@@ -5,15 +5,15 @@
 	<summary>Nextcloud Video To Gif Example</summary>
 	<description>
 	<![CDATA[
-**Demonstration of using [`AppAPI`](https://github.com/cloud-py-api/app_api) and File Actions.**
+**Demonstration app using [`AppAPI`](https://github.com/nextcloud/app_api) and the [Nextcloud Python Framework](https://github.com/cloud-py-api/nc_py_api) with the Files API.**
 
-This application is an example, with simple conversion using opencv and numpy.
+This application is just an example, with simple conversion using opencv and numpy.
 
-After adding the ability for external applications to display a user interface, the example will be modified to use more complex logic depending on the parameters specified by the user.
+Other modifications such as displaying a user interface or specifying additional user parameters/settings are left as exercises to the reader. Pull requests with your solutions are welcome!
 
 Refer to [How to install](https://github.com/cloud-py-api/to_gif_example/blob/main/HOW_TO_INSTALL.md) to try it.
 	]]></description>
-	<version>1.3.0</version>
+	<version>1.4.0</version>
 	<licence>MIT</licence>
 	<author mail="andrey18106x@gmail.com" homepage="https://github.com/andrey18106">Andrey Borysenko</author>
 	<author mail="bigcat88@icloud.com" homepage="https://github.com/bigcat88">Alexander Piskun</author>
@@ -24,18 +24,21 @@ Refer to [How to install](https://github.com/cloud-py-api/to_gif_example/blob/ma
 	<bugs>https://github.com/cloud-py-api/to_gif_example/issues</bugs>
 	<repository type="git">https://github.com/cloud-py-api/to_gif_example.git</repository>
 	<dependencies>
-		<nextcloud min-version="27" max-version="29"/>
+		<nextcloud min-version="28" max-version="31"/>
 	</dependencies>
 	<external-app>
 		<docker-install>
 			<registry>ghcr.io</registry>
 			<image>cloud-py-api/to_gif_example</image>
-			<image-tag>1.3.0</image-tag>
+			<image-tag>latest</image-tag>
 		</docker-install>
-		<scopes>
-			<value>FILES</value>
-			<value>NOTIFICATIONS</value>
-		</scopes>
-		<system>false</system>
+		<routes>
+			<route>
+				<url>.*</url>
+				<verb>GET,POST,PUT,DELETE</verb>
+				<access_level>USER</access_level>
+				<headers_to_exclude>[]</headers_to_exclude>
+			</route>
+		</routes>
 	</external-app>
 </info>
